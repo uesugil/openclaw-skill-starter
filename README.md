@@ -1,5 +1,10 @@
 # 🛠️ OpenClaw Skill Starter
 
+[![Stars](https://img.shields.io/github/stars/uesugil/openclaw-skill-starter?style=flat-square)](https://github.com/uesugil/openclaw-skill-starter/stargazers)
+[![Forks](https://img.shields.io/github/forks/uesugil/openclaw-skill-starter?style=flat-square)](https://github.com/uesugil/openclaw-skill-starter/network/members)
+[![License](https://img.shields.io/github/license/uesugil/openclaw-skill-starter?style=flat-square)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/uesugil/openclaw-skill-starter?style=flat-square)](https://github.com/uesugil/openclaw-skill-starter/commits/main)
+
 > **Template for creating OpenClaw agent skills quickly**
 
 A boilerplate and development kit for building OpenClaw skills. Includes project structure, best practices, and example implementations.

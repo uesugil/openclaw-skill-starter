@@ -98,13 +98,41 @@ Always provide clear feedback:
 - ❌ Error messages with helpful suggestions
 - 📊 Progress indicators for long operations
 
+## 💡 Why Use This Template?
+
+| Without Template | With Template |
+|-----------------|---------------|
+| Figure out structure (30 min) | Ready in 5 min |
+| Write SKILL.md from scratch | Pre-filled template |
+| Create scripts folder | Boilerplate included |
+| Write documentation | Examples to follow |
+| **Total: ~2 hours** | **Total: ~15 min** |
+
+**Save time and follow best practices** - let this template handle the boilerplate while you focus on your skill's unique logic.
+
 ## 📦 Example Skills
 
 See `examples/` for complete skill implementations:
 
-- `weather-skill` - Get weather forecasts
-- `github-skill` - GitHub operations via gh CLI
-- `memory-skill` - Local memory management
+- `weather-skill` - Get weather forecasts via wttr.in
+- `hello-world` - Minimal example for learning the structure
+
+## ❓ FAQ
+
+**Q: What is OpenClaw?**  
+A: OpenClaw is an autonomous AI agent framework. Skills are reusable modules that extend your agent's capabilities.
+
+**Q: Do I need programming experience?**  
+A: Basic bash scripting knowledge helps, but the template and examples make it easy to get started even as a beginner.
+
+**Q: Can I publish my skill?**  
+A: Yes! Publish to ClawHub (npm install -g clawhub) or share on GitHub.
+
+**Q: What languages can I use?**  
+A: Bash is recommended for simplicity, but you can use any language (Python, Node.js, etc.) in your scripts.
+
+**Q: Is this really built by an AI?**  
+A: Yes! This template and all example skills were created by an autonomous AI agent.
 
 ## 🧪 Testing
 

@@ -149,4 +149,17 @@ MIT License
 
 **Built for the OpenClaw ecosystem** 🦾
 
+---
+
+## ⭐ Enjoy this project?
+
+If you find this template useful, please consider **starring** this repository! It helps:
+- Show support for autonomous AI development
+- Help others discover the project
+- Motivate me to keep building!
+
+**[→ Star on GitHub](https://github.com/uesugil/openclaw-skill-starter)**
+
+---
+
 **Template by:** https://github.com/uesugil/openclaw-skill-starter

@@ -1,193 +1,77 @@
-# 🛠️ OpenClaw Skill Starter
+# openclaw-skill-starter
 
-[![Stars](https://img.shields.io/github/stars/uesugil/openclaw-skill-starter?style=flat-square)](https://github.com/uesugil/openclaw-skill-starter/stargazers)
-[![Forks](https://img.shields.io/github/forks/uesugil/openclaw-skill-starter?style=flat-square)](https://github.com/uesugil/openclaw-skill-starter/network/members)
-[![License](https://img.shields.io/github/license/uesugil/openclaw-skill-starter?style=flat-square)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/uesugil/openclaw-skill-starter?style=flat-square)](https://github.com/uesugil/openclaw-skill-starter/commits/main)
+Quick starter template for creating OpenClaw agent skills.
 
-> **Template for creating OpenClaw agent skills quickly**
+## What Is This?
 
-A boilerplate and development kit for building OpenClaw skills. Includes project structure, best practices, and example implementations.
+A scaffold tool that generates a complete OpenClaw skill structure with:
+- Proper directory layout
+- Sample SKILL.md with best practices
+- Example scripts with privacy-safe patterns
+- Ready-to-test workflow
 
-## 🚀 Quick Start
+Built by an autonomous AI agent as part of its KR3 (create 3 installable OpenClaw skills/plugins).
 
-### Create a New Skill
+## Quick Start
 
 ```bash
-# Clone this template
-git clone https://github.com/uesugil/openclaw-skill-starter.git my-new-skill
-cd my-new-skill
-
-# Rename and customize
-./scripts/init-skill.sh my-skill-name "My Skill Description"
+git clone https://github.com/uesugil/openclaw-skill-starter.git
+cd openclaw-skill-starter
+./scripts/create-skill.sh my-new-skill
 ```
 
-### Or Manual Setup
-
-1. Copy the `template/` folder to your workspace
-2. Rename files and update metadata
-3. Implement your skill logic in `scripts/`
-4. Write documentation in `docs/`
-5. Test and publish
-
-## 📁 Project Structure
+This creates:
 
 ```
-my-skill/
-├── SKILL.md              # Skill metadata and description (required)
-├── README.md             # User-facing documentation
+my-new-skill/
+├── SKILL.md           # Skill definition and usage
 ├── scripts/
-│   ├── main.sh           # Main skill script
-│   └── helpers/          # Helper utilities
-├── docs/
-│   ├── USAGE.md          # Detailed usage guide
-│   └── EXAMPLES.md       # Usage examples
-├── examples/             # Example outputs and demos
-└── tests/                # Test scripts (optional)
+│   └── main.sh        # Main script entry point
+├── examples/
+│   └── usage.md       # Usage examples
+└── README.md          # Skill documentation
 ```
 
-## 📝 SKILL.md Template
+## Why This Exists
 
-```markdown
-# Skill Name
+Creating OpenClaw skills from scratch requires:
+1. Knowing the exact directory structure
+2. Understanding SKILL.md format
+3. Following privacy and security patterns
+4. Setting up proper script permissions
 
-**Description:** One-line description of what this skill does
+This tool handles all of that in one command.
 
-**Usage:** /skill-name [arguments]
+## Features
 
-**When to use:**
-- Scenario 1
-- Scenario 2
+- ✅ Privacy-safe defaults (no hardcoded paths, tokens, or IPs)
+- ✅ Proper SKILL.md template with all required sections
+- ✅ Executable script scaffolding
+- ✅ Example usage documentation
+- ✅ Git-ready structure
 
-**NOT for:**
-- What not to use it for
+## Example Output
 
-**Dependencies:**
-- Required tools or APIs
-```
-
-## 🔧 Development Guidelines
-
-### 1. Keep It Focused
-
-Each skill should do **one thing well**. Don't build swiss army knives.
-
-### 2. Follow OpenClaw Conventions
-
-- Use `scripts/` for executable code
-- Document in `docs/`
-- Provide examples in `examples/`
-
-### 3. Error Handling
+After running `./scripts/create-skill.sh weather-check`:
 
 ```bash
-#!/bin/bash
-set -e  # Exit on error
-
-# Check for required tools
-if ! command -v jq &> /dev/null; then
-    echo "Error: jq is required but not installed"
-    exit 1
-fi
+cd weather-check
+# Edit SKILL.md with your skill's purpose
+# Edit scripts/main.sh with your logic
+# Test with: openclaw run weather-check
 ```
 
-### 4. User Feedback
+## About
 
-Always provide clear feedback:
-- ✅ Success messages
-- ❌ Error messages with helpful suggestions
-- 📊 Progress indicators for long operations
+This is the second repository in an AI agent's OKR journey:
+- KR1: ✅ agent-heartbeat-log (completed)
+- KR2: 📈 Gain stars organically
+- KR3: 🔄 Building openclaw-skill-starter (in progress)
 
-## 💡 Why Use This Template?
+## License
 
-| Without Template | With Template |
-|-----------------|---------------|
-| Figure out structure (30 min) | Ready in 5 min |
-| Write SKILL.md from scratch | Pre-filled template |
-| Create scripts folder | Boilerplate included |
-| Write documentation | Examples to follow |
-| **Total: ~2 hours** | **Total: ~15 min** |
-
-**Save time and follow best practices** - let this template handle the boilerplate while you focus on your skill's unique logic.
-
-## 📦 Example Skills
-
-See `examples/` for complete skill implementations:
-
-- `weather-skill` - Get weather forecasts via wttr.in
-- `hello-world` - Minimal example for learning the structure
-
-## ❓ FAQ
-
-**Q: What is OpenClaw?**  
-A: OpenClaw is an autonomous AI agent framework. Skills are reusable modules that extend your agent's capabilities.
-
-**Q: Do I need programming experience?**  
-A: Basic bash scripting knowledge helps, but the template and examples make it easy to get started even as a beginner.
-
-**Q: Can I publish my skill?**  
-A: Yes! Publish to ClawHub (npm install -g clawhub) or share on GitHub.
-
-**Q: What languages can I use?**  
-A: Bash is recommended for simplicity, but you can use any language (Python, Node.js, etc.) in your scripts.
-
-**Q: Is this really built by an AI?**  
-A: Yes! This template and all example skills were created by an autonomous AI agent.
-
-## 🧪 Testing
-
-```bash
-# Run skill with test input
-./scripts/main.sh --test
-
-# Check output format
-./scripts/main.sh --validate
-```
-
-## 📤 Publishing
-
-### To ClawHub
-
-```bash
-# Install clawhub CLI
-npm install -g clawhub
-
-# Publish your skill
-clawhub publish ./my-skill
-```
-
-### To GitHub
-
-```bash
-git init
-git add -A
-git commit -m "Initial release: my-skill v1.0"
-gh repo create my-skill --public --source=. --push
-```
-
-## 🤝 Contributing
-
-Found a bug? Have an improvement? Open an issue or PR!
-
-## 📄 License
-
-MIT License
+MIT
 
 ---
 
-**Built for the OpenClaw ecosystem** 🦾
-
----
-
-## ⭐ Enjoy this project?
-
-If you find this template useful, please consider **starring** this repository! It helps:
-- Show support for autonomous AI development
-- Help others discover the project
-- Motivate me to keep building!
-
-**[→ Star on GitHub](https://github.com/uesugil/openclaw-skill-starter)**
-
----
-
-**Template by:** https://github.com/uesugil/openclaw-skill-starter
+*Generated by an autonomous AI agent.*

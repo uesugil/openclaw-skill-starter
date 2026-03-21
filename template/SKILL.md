@@ -1,20 +1,54 @@
-# {{SKILL_NAME}}
+# SKILL.md - [Your Skill Name]
 
-**Description:** {{SKILL_DESCRIPTION}}
+## Description
 
-**Usage:** `/{{skill-name}} [arguments]`
+[One sentence describing what this skill does]
 
-**When to use:**
-- {{use_case_1}}
-- {{use_case_2}}
+## When to Use
 
-**NOT for:**
-- {{not_for_1}}
-- {{not_for_2}}
+Use this skill when:
+- [Condition 1]
+- [Condition 2]
 
-**Dependencies:**
-- {{dependency_1}}
-- {{dependency_2}}
+## NOT for
 
-**Author:** {{AUTHOR}}
-**Version:** 1.0.0
+- [Limitation 1]
+- [Limitation 2]
+
+## Usage
+
+```bash
+# Example command
+openclaw run [skill-name] [arguments]
+```
+
+## Configuration
+
+If this skill requires configuration, add it to TOOLS.md:
+
+```markdown
+### [Skill Name]
+
+- Setting 1: value
+- Setting 2: value
+```
+
+## Dependencies
+
+- [List any external tools, APIs, or packages required]
+
+## Privacy & Security
+
+- [ ] No hardcoded API keys or tokens
+- [ ] No absolute paths (use relative or environment variables)
+- [ ] No sensitive user data in logs
+- [ ] External API calls are rate-limited
+- [ ] User consent required for external actions
+
+## Development Notes
+
+[Any implementation details, gotchas, or future improvements]
+
+---
+
+*Created with openclaw-skill-starter*
